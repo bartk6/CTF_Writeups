@@ -49,6 +49,7 @@ https://kickme-95f596ff5b61453187fbc1c9faa3052e.s3.us-east-1.amazonaws.com/flag.
 }
 ```
 ----
+## Solve
 - The resource policy allows access with a User Agent matching `aws-sdk-go*` 
 - To get the flag through s3:GetObject, I used the presigned url and `curl -a "aws-sdk-go*" "s3_presigned_url"` to set the correct user agent.
 
