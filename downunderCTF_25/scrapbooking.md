@@ -15,9 +15,9 @@ Rummaging through the ruins of an old server and next to some scissors and glue 
 ![](binwalk.png)
 - The hint mentions scissors and glue and binwalk detects 3 PNG images 1024 bytes apart? 
 - PNG files start with an 8 bytes signature `89 50 4E 47 0D 0A 1A 0A` and end with an `IEND` trailer, with `IDAT` image data in between, all contained within warped.png, binwalk is detecting just the first 1024 chunk which contains the header.
-![][Pasted image 20251103180538.png]
-![][Screenshot 2025-07-20 132623.png]
-![][Screenshot 2025-07-20 145920.png]
+![](Pasted image 20251103180538.png)
+![](Screenshot 2025-07-20 132623.png)
+![](Screenshot 2025-07-20 145920.png)
 - Using Python to separate the 1024 chunks into 3 image files reveals the flag.
 ```python
 chunk_size = 1024
